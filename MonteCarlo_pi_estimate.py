@@ -1,3 +1,4 @@
+# Estimates pi
 import random
 
 n = 100000
