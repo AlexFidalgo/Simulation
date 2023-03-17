@@ -1,8 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-n = 1000 #sample size
-k = 500000 #number of samples
+n = 100000 #sample size
+k = 5000 #number of samples
 
 # Generate k samples of n observations from a normal distribution
 samples = np.random.normal(loc=0, scale=1, size=(k, n))
@@ -22,8 +22,11 @@ print(f"Standard error of sample mean: {standard_error:.5f}")
 print(f"True standard error: {1/(n**0.5)}")
 
 # Plot the distribution of the sample means
-plt.hist(sample_means, bins=1000)
+plt.hist(sample_means, bins= 1000)
 plt.xlabel('Sample mean')
 plt.ylabel('Frequency')
 plt.title(f'Distribution of Sample Means (n={n})')
+plt.xlim(-0.03, 0.03)
 plt.show()
+
+# higher n means lower standard error
