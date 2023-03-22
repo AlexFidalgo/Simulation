@@ -33,4 +33,3 @@ plt.xlim(-0.03, 0.03)
 plt.show()
 
 # higher n means lower standard error
-# as k increases, it resembles more and more a normal distribution
