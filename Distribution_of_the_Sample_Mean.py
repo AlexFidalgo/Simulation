@@ -10,6 +10,9 @@ samples = np.random.normal(loc=0, scale=1, size=(k, n))
 # Calculate the sample means
 sample_means = np.mean(samples, axis=1)
 
+# Now we calculate the value of the statistic and construct a histogram of the k values. 
+# This histogram gives the approximate sampling distribution of the statistic
+
 # Calculate the expected value of the sample means and the standard error of the sample mean
 expected_value = np.mean(sample_means)
 standard_error = np.std(sample_means, ddof=1)
@@ -30,3 +33,4 @@ plt.xlim(-0.03, 0.03)
 plt.show()
 
 # higher n means lower standard error
+# as k increases, it resembles more and more a normal distribution
