@@ -7,8 +7,8 @@ scale = 1/lam  # scale parameter
 pop_mean = scale # population mean
 pop_std = scale # population standard deviation
 
-# Sample size
-n = 100
+# Sample size (for n > 40, we can assume a normal distribution)
+n = 40
 
 # Samples from the exponential distribution
 samples = np.random.exponential(scale, (n, 10000))
@@ -22,5 +22,6 @@ z_scores = (sample_mean - pop_mean) / (sample_std / np.sqrt(n))
 
 # Plot the distribution of z scores
 plt.hist(z_scores, bins=30, density=True)
+plt.xlim([-10, 10]) # sets the x-axis limits to be fixed
 plt.xlabel('Standardized sample mean')
 plt.ylabel('Probability density')
