@@ -1,6 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+# Number of times to repeat the sampling process
+rep = 10000
+
 # Exponential distribution
 lam = 0.5  # rate parameter
 scale = 1/lam  # scale parameter
@@ -11,7 +14,7 @@ pop_std = scale # population standard deviation
 n = 40
 
 # Samples from the exponential distribution
-samples = np.random.exponential(scale, (n, 10000))
+samples = np.random.exponential(scale, (n, rep))
 
 # Sample mean and standard deviation
 sample_mean = np.mean(samples, axis=0)
