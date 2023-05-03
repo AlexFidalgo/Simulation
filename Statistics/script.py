@@ -1,1 +1,0 @@
-large_sample_confidence_interval_for_the_mean.py
