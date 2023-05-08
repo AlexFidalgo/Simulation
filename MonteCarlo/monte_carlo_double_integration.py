@@ -29,3 +29,10 @@ if __name__ == '__main__':
         return (1 if (0 <= x <= 2 and 3 <= y <= 4.5) else -1)
     
     res = MonteCarlo_double (lambda x, y: 1, g, 0, 3, 2, 5, 1000)
+    
+    def g(x,y):
+        xc, yc = 0,0
+        R = 2
+        return R**2 - ((x-xc)**2 + (y-yc)**2)
+    
+    res = MonteCarlo_double (lambda x, y: np.sqrt(x**2 + y**2), g, -2, 2, -2, 2, 1000)
